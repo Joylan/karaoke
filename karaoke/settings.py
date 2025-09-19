@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0n96$%g**z!_l2zsq+er&fya!21b!&3od1g64axz6vfax9cqez'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['karaoke-47lx.onrender.com', 'localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['karaoke-47lx.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware"
 ]
 
 ROOT_URLCONF = 'karaoke.urls'
@@ -85,6 +87,8 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "karaoke" / "static",
 ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
