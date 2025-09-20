@@ -19,7 +19,8 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 # ALLOWED_HOSTS = ['karaoke-47lx.onrender.com', 'localhost', '127.0.0.1']
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
+ALLOWED_HOSTS = os.environ.get("https://karaoke-f7d5e7119ce2.herokuapp.com", "localhost,127.0.0.1").split(",")
+https://karaoke-f7d5e7119ce2.herokuapp.com/
 
 # Application definition
 
